@@ -1,0 +1,89 @@
+@import "null.scss";
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+
+    .wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    p {
+        color: white;
+        font-size: 30px;
+        font-family: cursive;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 330px;
+    }
+
+    #counter {
+        color: white;
+        font-size: 30px;
+        font-family: cursive;
+        text-align: center;
+        position: relative;
+        top: 0px;
+    }
+
+    .canvas {
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 200px;
+        border: 1px solid white;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .player {
+            @keyframes jump {
+                0% {
+                    top: 110px;
+                }
+
+                50% {
+                    top: 60px;
+                }
+
+                100% {
+                    top: 110px;
+                }
+            }
+
+            background: blue;
+            width: 20px;
+            height: 80px;
+            position: relative;
+            top: 110px;
+            left: 10px;
+            border-radius: 5px;
+        }
+
+        .block {
+            @keyframes block {
+                0% {
+                    left: 490px;
+                }
+
+                100% {
+                    left: -10px;
+                }
+            }
+
+            background: red;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 90px;
+            left: 470px;
+            border-radius: 10px;
+        }
+    }
+}
